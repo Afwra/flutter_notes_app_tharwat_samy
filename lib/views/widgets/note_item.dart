@@ -30,7 +30,7 @@ class NoteItem extends StatelessWidget {
                 'Build your career with tharwat samy',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.5),
-                  fontSize: 20,
+                  fontSize: 18,
                 ),
               ),
             ),
