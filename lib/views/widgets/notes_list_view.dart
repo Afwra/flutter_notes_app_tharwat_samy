@@ -6,14 +6,17 @@ class NotesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemBuilder: (context, index) => const Padding(
-        padding: EdgeInsets.only(
-          bottom: 16,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4.0),
+      child: ListView.builder(
+        itemBuilder: (context, index) => const Padding(
+          padding: EdgeInsets.only(
+            bottom: 16,
+          ),
+          child: NoteItem(),
         ),
-        child: NoteItem(),
+        itemCount: 5,
       ),
-      itemCount: 5,
     );
   }
 }
