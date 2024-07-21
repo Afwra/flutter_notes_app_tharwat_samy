@@ -19,6 +19,7 @@ class NotesView extends StatelessWidget {
             builder: (context) {
               return const CustomBottomSheet();
             },
+            isScrollControlled: true,
           );
         },
         backgroundColor: Colors.cyan,
