@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:notes_app/cubits/get_note_cubit/get_notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_notes_view.dart';
 
@@ -49,7 +51,10 @@ class NoteItem extends StatelessWidget {
                   color: Colors.black,
                   size: 26,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                  BlocProvider.of<GetNotesCubit>(context).getAllNotes();
+                },
               ),
             ),
             Padding(
